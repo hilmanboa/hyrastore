@@ -109,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    // --- REVISI LOGIKA STICKY MENGGUNAKAN INTERSECTION OBSERVER ---
     function setupStickyCategories() {
         const categorySection = document.querySelector('.category-section');
         const topBar = document.querySelector('.top-bar');
@@ -120,9 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Atur posisi 'top' untuk .category-section agar pas di bawah top-bar
         categorySection.style.top = `${topBarHeight}px`;
 
-        // Kita tidak perlu lagi observer, karena `position: sticky` yang disempurnakan sudah cukup
-        // Logika ini dibiarkan kosong agar tidak ada error, tapi tidak melakukan apa-apa
-        // CSS akan menangani semuanya secara otomatis dan mulus.
+        // Dengan metode CSS baru, JavaScript tidak perlu lagi melakukan apa-apa.
+        // Cukup pastikan 'top' nya benar. CSS akan menangani sisanya.
     }
     
     function adjustCategoryAlignment() {
